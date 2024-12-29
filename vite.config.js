@@ -5,5 +5,5 @@ import { ghPages } from "vite-plugin-gh-pages";
 
 export default defineConfig({
   plugins: [react(), svgr(), ghPages()],
-  base: "/",
+  base: "/LearnLingo/",
 });
