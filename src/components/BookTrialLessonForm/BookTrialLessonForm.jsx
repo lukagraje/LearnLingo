@@ -56,7 +56,7 @@ export const BookTrialLessonForm = ({ languages, onSubmit }) => {
   return (
     <div>
       {languages.length > 1 && (
-        <FormControl>
+        <FormControl style={{ marginBottom: 20 }}>
           <FormTitle>Select the language you want to learn:</FormTitle>
           <RadioGroup
             aria-label="language"
@@ -101,7 +101,7 @@ export const BookTrialLessonForm = ({ languages, onSubmit }) => {
               setFieldValue,
             }) => (
               <Form onSubmit={handleSubmit}>
-                <RadioGroup
+                <RadioGroup style={{marginBottom: 20}}
                   aria-label="select option"
                   name="lesson"
                   value={values.lesson}

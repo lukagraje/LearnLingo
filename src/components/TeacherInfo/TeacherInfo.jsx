@@ -13,16 +13,8 @@ import {
   TeacherDetailsTitle,
   TeacherName,
 } from "./TeacherInfo.styled";
-import { GoBook } from "react-icons/go";
-import { FaStar, FaRegHeart, FaHeart } from "react-icons/fa";
 
-import { useDispatch, useSelector } from "react-redux";
-
-import { useAuth } from "../../hooks/useAuth";
-
-import { db } from "../../assets/FirebaseConfig/FirebaseConfig";
-import { useFavoriteTeachers } from "../../hooks/useFavorite";
-import { selectFavoriteTeachers } from "../../redux/teachers/teachersSelectors";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 
 export const TeacherInfo = ({
   lessons_done,
@@ -43,9 +35,12 @@ export const TeacherInfo = ({
       <LessonsBar>
         <Language>Languages</Language>
         <LessonsList>
-          
           <LessonsListItem>
-           <LessonsDetails> <StyledBook />Lessons online</LessonsDetails>
+            <LessonsDetails>
+              {" "}
+              <StyledBook />
+              Lessons online
+            </LessonsDetails>
             <Separator>|</Separator>
           </LessonsListItem>
           <LessonsListItem>

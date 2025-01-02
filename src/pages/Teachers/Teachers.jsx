@@ -16,8 +16,7 @@ const TeachersPage = () => {
   const handleClickMoreButton = () => {
     if (count >= filteredTeachers.length) return;
     setCount((prevCount) => prevCount + TEACHERS_PER_PAGE);
-    console.log(`"Count:" ${count}`);
-    console.log(`"filteredTeachers length: ${filteredTeachers.length}`);
+  
   };
 
   const limitedTeachers = filteredTeachers.slice(0, count);

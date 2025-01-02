@@ -39,8 +39,12 @@ export const TeachersMarkup = ({ teachers }) => {
     const teacherDetails = teachers.find((teacher) => teacher.id === id);
     setTeacher(teacherDetails);
     openModal("BookTrialLesson");
-
-    setVisibility({ ...visibility, [id]: false });
+    if (!isLoggedIn) {
+      return openModal("NotAuth")
+    } else {
+      setVisibility({ ...visibility, [id]: false });
+    }
+    
   };
 
   const deleteFavorite = (id) => {
@@ -88,8 +92,7 @@ export const TeachersMarkup = ({ teachers }) => {
               conditions,
               experience,
               id,
-            },
-            index
+            },            
           ) => {
             return (
               <TeacherItem key={id}>

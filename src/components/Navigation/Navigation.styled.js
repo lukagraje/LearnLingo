@@ -5,7 +5,12 @@ export const NavContainer = styled.nav`
   display: flex;
   gap: 6px;
 
-  @media (min-width: 768px) {
+  @media screen and (max-width: 768px) {
+  width: 100%;
+  justify-content: space-evenly;
+  }
+
+  @media screen and (min-width: 769px) {
     gap: 20px;
   }
 `;

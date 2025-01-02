@@ -7,19 +7,12 @@ export const useModal = () => {
   });
 
   const openModal = (name) => {
-    console.log("Opening modal:", name); // Dodajemy logowanie   
-    setModalState({ name, isOpen: true });    
+    setModalState({ name, isOpen: true });
   };
 
   const closeModal = () => {
-    console.log("Closing modal"); // Dodajemy logowanie
-
     setModalState({ name: "", isOpen: false });
   };
-
-  useEffect(() => {
-    console.log("Modal state updated:", modalState);
-  }, [modalState]); // Logujemy zmiany stanu
 
   useEffect(() => {
     if (modalState.isOpen) {

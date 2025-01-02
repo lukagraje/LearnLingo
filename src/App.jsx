@@ -1,10 +1,8 @@
-import { useEffect, lazy, Suspense } from "react";
-import { useDispatch } from "react-redux";
+import { Suspense } from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import { PrivateRoute } from "./components/Routes/PrivateRoute/PrivateRoute";
-
-
-import { Container } from "./main";
 
 import HomePage from "./pages/Home/Home";
 import FavoritesPage from "./pages/Favorites/Favorites";
@@ -12,7 +10,13 @@ import TeachersPage from "./pages/Teachers/Teachers";
 import Layout from "./components/SharedLayout/SharedLayout";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
-function App() { 
+function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>

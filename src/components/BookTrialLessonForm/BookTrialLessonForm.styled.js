@@ -5,7 +5,7 @@ export const FormTitle = styled.p`
   font-size: 24px;
   font-weight: 500;
   line-height: 1.33;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 `;
 
 export const Form = styled.form`

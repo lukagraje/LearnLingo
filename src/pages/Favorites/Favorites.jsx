@@ -1,11 +1,13 @@
 import React from "react";
-import { useSelector } from "react-redux";
+
 import { useState } from "react";
 import { useFavoriteTeachers } from "../../hooks/useFavorite";
 import { TeachersMarkup } from "../../components/TeachersMarkup/TeachersMarkup";
 import { db } from "../../assets/FirebaseConfig/FirebaseConfig";
 import { Button, TeachersSection } from "../Teachers/Teachers.styled";
 import { Title } from "./Favorites.styled";
+import { Container } from "../../main";
+import { TeacherPageWrapper } from "../Teachers/Teachers.styled";
 
 const FAVORITE_TEACHERS_PER_PAGE = 4;
 
@@ -23,7 +25,9 @@ const FavoriteTeachers = () => {
 
   return (
     <TeachersSection>
-      {favorite.length > 0 ? (
+      <Container>
+        <TeacherPageWrapper>
+          {favorite.length > 0 ? (
         <div>
           <TeachersMarkup teachers={limitedFavoriteTeachers} />
           {count < favorite.length && (
@@ -35,6 +39,10 @@ const FavoriteTeachers = () => {
       ) : (
         <Title>You haven't added teachers to your favorites yet.</Title>
       )}
+      </TeacherPageWrapper>
+
+      </Container>
+      
     </TeachersSection>
   );
 };

@@ -24,11 +24,12 @@ export const BookTrialLesson = ({ teacher, onSubmit }) => {
           width="44"
           height="44"
         />
+
+        <div>
+          <TeacherTitle>Your teacher</TeacherTitle>
+          <TeacherName>{teacher.name}</TeacherName>
+        </div>
       </WrapperTeacher>
-      <div>
-        <TeacherTitle>Your teacher</TeacherTitle>
-        <TeacherName>{teacher.name}</TeacherName>
-      </div>
       <BookTrialLessonForm languages={teacher.languages} onSubmit={onSubmit} />
     </Section>
   );

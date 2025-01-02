@@ -4,6 +4,15 @@ import { NavLink } from "react-router-dom";
 export const AuthNavContainer = styled.div`
   display: flex;
   gap: 15px;
+
+  @media screen and (max-width: 768px) {
+  width: 100%;
+  justify-content: space-evenly;
+  }
+
+  @media screen and (min-width: 769px) {
+  gap: 20px;
+  }
 `;
 
 export const StyledNavLink = styled(NavLink)`
@@ -31,7 +40,7 @@ export const ButtonLogin = styled.button`
   border: none;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   text-decoration-color: transparent;
   transition: text-decoration var(--transition);
 
@@ -53,7 +62,7 @@ export const ButtonLogin = styled.button`
 
 export const ButtonRegister = styled.button`
   cursor: pointer;
-  padding: 12px 28px;
+  padding: 11px 26px;
   max-width: 166px;
   border: none;
   border-radius: 12px;
