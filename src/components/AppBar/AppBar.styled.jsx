@@ -4,7 +4,7 @@ export const Header = styled.header.withConfig({
   shouldForwardProp: (prop) => prop !== "isSticky",
 })`
   padding-inline: 64px;
-  padding-block: 20px 15px;
+  padding-block: 20px 8px;
   background-color: white;
   top: 0;
   z-index: 2;
@@ -12,6 +12,9 @@ export const Header = styled.header.withConfig({
   box-shadow: ${(props) =>
     props.isSticky ? "0px 4px 10px rgba(0, 0, 0, 0.1)" : "none"};
   transition: all 0.3s ease-in-out;
+
+  @media screen and (min-width: 769px) {
+  padding-block: 20px 15px}
 `;
 
 export const WrapperLogo = styled.div`
@@ -25,7 +28,7 @@ export const HeaderWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  row-gap: 20px;
+  row-gap: 14px;
 `;
 
 export const TitleLogo = styled.p`

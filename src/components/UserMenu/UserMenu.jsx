@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { logoutUser } from "../../redux/auth/authOperations";
 import { ButtonRegister } from "../AuthNav/AuthNav.styled";
+import { LogoutWrapper } from "./UserMenu.styled";
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -10,8 +11,8 @@ export const UserMenu = () => {
   };
 
   return (
-    <div>
+    <LogoutWrapper>
       <ButtonRegister onClick={handleLogout}>Logout</ButtonRegister>
-    </div>
+    </LogoutWrapper>
   );
 };
